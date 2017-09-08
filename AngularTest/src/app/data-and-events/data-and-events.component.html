@@ -1,0 +1,22 @@
+<div id="DataAndEvents">
+  <button class="btn btn-primary" [class.active]="isActive">Save</button>
+  <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Another Btn</button>
+  <div (click)="onDivClicked()">
+    <button (click)="onSave($event)">Event Save</button>
+  </div>
+  <!-- <input (keyup.enter)="onKeyUp($event)" /> -->
+  <!-- #email is a template Variable -->
+  <!-- <input #email (keyup.enter)="onKeyUp(email.value)" /> -->
+  <!-- two way binding example
+  <input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" /> -->
+  <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+
+  <div (click)="onStarClick()">
+    <span [class]="isFavorite ? 'glyphicon glyphicon-star' : 'glyphicon glyphicon-star-empty'"></span>
+  </div>
+</div>
+
+<div id="exercise2">
+  <input [(ngModel)]="titleValue" />
+  <span>{{ titleValue | titlecase }}</span>
+</div>
