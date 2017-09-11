@@ -10,6 +10,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { DataAndEventsComponent } from './data-and-events/data-and-events.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
+import { TwitterlikeComponent } from './twitterlike/twitterlike.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { DataAndEventsComponent } from './data-and-events/data-and-events.compon
     CourseComponent,
     AuthorsComponent,
     DataAndEventsComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent,
+    PanelComponent,
+    TwitterlikeComponent
   ],
   imports: [
     BrowserModule,

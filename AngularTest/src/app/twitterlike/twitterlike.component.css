@@ -1,0 +1,7 @@
+.glyphicon-heart {
+  color:#CCC;
+  cursor:pointer;
+}
+.glyphicon-heart.active {
+  color:deeppink;
+}
