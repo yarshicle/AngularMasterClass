@@ -13,6 +13,9 @@ import { DataAndEventsComponent } from './data-and-events/data-and-events.compon
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
 import { TwitterlikeComponent } from './twitterlike/twitterlike.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { InputFormatDirective } from './directives/input-format.directive';
+import { DirectivesZippyComponent } from './directives-zippy/directives-zippy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { TwitterlikeComponent } from './twitterlike/twitterlike.component';
     SummaryPipe,
     FavoriteComponent,
     PanelComponent,
-    TwitterlikeComponent
+    TwitterlikeComponent,
+    DirectivesComponent,
+    InputFormatDirective,
+    DirectivesZippyComponent
   ],
   imports: [
     BrowserModule,
