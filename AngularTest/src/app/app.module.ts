@@ -16,6 +16,7 @@ import { TwitterlikeComponent } from './twitterlike/twitterlike.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormatDirective } from './directives/input-format.directive';
 import { DirectivesZippyComponent } from './directives-zippy/directives-zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DirectivesZippyComponent } from './directives-zippy/directives-zippy.co
     TwitterlikeComponent,
     DirectivesComponent,
     InputFormatDirective,
-    DirectivesZippyComponent
+    DirectivesZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
