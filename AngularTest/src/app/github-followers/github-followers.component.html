@@ -1,0 +1,12 @@
+<div>
+  <h2>Mosh's Followers</h2>
+  <div *ngFor="let follower of followers" class="clearfix">
+    <div class="pull-left">
+      <img [src]="follower.avatar_url" class="avatar" />
+    </div>
+    <div>
+      <h3>{{ follower.login }}</h3>
+      <a [href]="follower.html_url">{{ follower.html_url }}</a>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+import { GithubService } from './services/github.service';
+import { AppErrorHandler } from './common/app-error-handler';
 import { HttpModule } from '@angular/http';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SummaryPipe } from './pipelines/summary.pipe';
@@ -7,7 +9,7 @@ import { CoursesService } from './services/courses.service';
 import { CoursesComponent } from './otherComponents/courses.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
@@ -23,6 +25,7 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { PostService } from './services/post.service';
     SignupFormComponent,
     NewCourseFormComponent,
     ChangePasswordComponent,
-    PostsComponent
+    PostsComponent,
+    GithubFollowersComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,13 @@ import { PostService } from './services/post.service';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [CoursesService, AuthorsService, PostService],
+  providers: [
+    CoursesService,
+    AuthorsService,
+    PostService,
+    GithubService,
+    { provide: ErrorHandler, useClass: AppErrorHandler}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
