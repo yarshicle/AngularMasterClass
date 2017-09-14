@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SummaryPipe } from './pipelines/summary.pipe';
 import { AuthorsService } from './services/authors.service';
@@ -20,6 +21,8 @@ import { DirectivesZippyComponent } from './directives-zippy/directives-zippy.co
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -38,14 +41,16 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ContactFormComponent,
     SignupFormComponent,
     NewCourseFormComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [CoursesService, AuthorsService],
+  providers: [CoursesService, AuthorsService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
