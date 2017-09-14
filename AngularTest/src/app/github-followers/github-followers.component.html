@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h2>Mosh's Followers</h2>
   <div *ngFor="let follower of followers" class="clearfix">
     <div class="pull-left">
@@ -9,4 +9,18 @@
       <a [href]="follower.html_url">{{ follower.html_url }}</a>
     </div>
   </div>
-</div>
+</div> -->
+<h2>Mosh's Followers</h2>
+<div class="media" *ngFor="let follower of followers">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object avatar" [src]="follower.avatar_url">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+      <a [routerLink]="['/followers', follower.id, follower.login]">{{ follower.login }}</a>
+      </h4>
+      <a [href]="follower.html_url">{{ follower.html_url }}</a>
+    </div>
+  </div>
