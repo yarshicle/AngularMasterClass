@@ -43,7 +43,7 @@ export class AppComponent {
   update(course) {
     this.db.object('/courses/' + course.$key)
       .update({
-        title: 'New Title',
+        title: 'New Title: ' + course.$value,
         isLive: true
       });
   }

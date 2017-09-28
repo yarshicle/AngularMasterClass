@@ -29,6 +29,12 @@ import {
           ]),
           query('@todoAnimation',
             stagger(200, animateChild()))
+            // animateChild() will apply to a child animation. Can also call the animation as well with useAnimation
+            // Or provide animation steps in an array, like below:
+            // stagger(200, [
+            //   style({ opacity: 0, transform: 'translateX(-20px) '}),
+            //   animate(1000)
+            // ]))
         ])
       ])
     ]),
@@ -46,6 +52,8 @@ import {
         useAnimation(bounceOutLeftAnimation)
       ])
     ])
+
+
     // fade,
     // slide
   ]
