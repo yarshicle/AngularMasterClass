@@ -1,0 +1,41 @@
+<!-- <md-checkbox 
+  #showDetails
+  [value]=""
+  [checked]="isChecked"
+  (change)="onChange($event)"
+  color="primary">Show Details</md-checkbox>
+
+  <div *ngIf="showDetails.checked">Some details....</div> -->
+
+
+  <!-- <md-radio-group value="0">
+    <md-radio-button value="1">Male</md-radio-button>
+    <md-radio-button value="0">Female</md-radio-button>
+  </md-radio-group> -->
+<!-- 
+  <md-select [(ngModel)]="color">
+    <md-option *ngFor="let color of colors" [value]="color.id">{{ color.name }}</md-option>
+  </md-select> -->
+<!-- <form class="example-form">
+  <md-form-field class="example-full-width">
+    <input ngModel #username="ngModel" name="username" type="text" item-width="900px" mdInput placeholder="Username" required>
+    <md-hint>Type a unique username</md-hint>
+    <span mdSuffix>@domain.com</span>
+    <span mdPrefix>admin.</span>
+    <md-error *ngIf="username.invalid && username.errors['required']">
+      The username field is required
+    </md-error>
+  </md-form-field>
+  <md-form-field class="example-full-width">
+    <textarea mdInput mdTextareaAutosize rows="2"></textarea>    
+  </md-form-field>
+</form>   -->
+<md-form-field>
+  <input 
+    (focus)="birthdate.open()"
+    [min]="minDate"
+    [max]="maxDate"
+    mdInput [mdDatepicker]="birthdate" placeholder="Choose a date">
+  <md-datepicker-toggle mdSuffix [for]="birthdate"></md-datepicker-toggle>
+  <md-datepicker #birthdate touchUi="true"></md-datepicker>
+</md-form-field>
