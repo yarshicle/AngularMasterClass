@@ -1,22 +1,24 @@
-<!-- <md-checkbox 
+<md-checkbox 
   #showDetails
   [value]=""
   [checked]="isChecked"
   (change)="onChange($event)"
   color="primary">Show Details</md-checkbox>
 
-  <div *ngIf="showDetails.checked">Some details....</div> -->
+  <div *ngIf="showDetails.checked">Some details....</div>
+<br /><br/>
 
-
-  <!-- <md-radio-group value="0">
+  <md-radio-group value="0">
     <md-radio-button value="1">Male</md-radio-button>
     <md-radio-button value="0">Female</md-radio-button>
-  </md-radio-group> -->
-<!-- 
+  </md-radio-group>
+  <br /><br/>
+
   <md-select [(ngModel)]="color">
     <md-option *ngFor="let color of colors" [value]="color.id">{{ color.name }}</md-option>
-  </md-select> -->
-<!-- <form class="example-form">
+  </md-select>
+  <br /><br/>
+<form class="example-form">
   <md-form-field class="example-full-width">
     <input ngModel #username="ngModel" name="username" type="text" item-width="900px" mdInput placeholder="Username" required>
     <md-hint>Type a unique username</md-hint>
@@ -26,10 +28,11 @@
       The username field is required
     </md-error>
   </md-form-field>
+  <br /><br/>
   <md-form-field class="example-full-width">
     <textarea mdInput mdTextareaAutosize rows="2"></textarea>    
   </md-form-field>
-</form>   -->
+</form>  <br /><br/>
 <md-form-field>
   <input 
     (focus)="birthdate.open()"
@@ -39,3 +42,54 @@
   <md-datepicker-toggle mdSuffix [for]="birthdate"></md-datepicker-toggle>
   <md-datepicker #birthdate touchUi="true"></md-datepicker>
 </md-form-field>
+<br /><br/>
+<md-icon>add_alert</md-icon>
+<br /><br/>
+<button md-button>Button 1</button>
+<button color="primary" md-raised-button>Primary</button>
+<button color="accent" md-raised-button>Accent</button>
+<button color="warn" md-raised-button>Warn</button>
+<button md-fab><md-icon>check</md-icon></button>
+
+<br /><br/>
+
+<md-chip-list>
+  <md-chip color="accent">One</md-chip>
+  <md-chip>Two</md-chip>
+</md-chip-list>
+<br/>
+<md-chip-list>
+  <md-chip *ngFor="let cat of categories" (click)="selectCategory(cat)" [selected]="cat.selected">{{ cat.name }}</md-chip>
+</md-chip-list>
+
+<br /><br/>
+
+<md-progress-spinner mode="determinate" [value]="progress"></md-progress-spinner>
+<md-progress-spinner mode="indeterminate" *ngIf="isLoading"></md-progress-spinner>
+
+<br /><br/>
+
+<span mdTooltip="Here is my tooltip" mdTooltipPosition="right">Some Text</span>
+
+<br /><br/>
+
+<md-tab-group>
+  <md-tab label="Billing">
+    Content of the Billing Tab
+  </md-tab>
+  <md-tab label="Shipping">
+    Content of the Shipping Tab
+  </md-tab>
+</md-tab-group>
+
+<br /><br/>
+
+<button 
+  (click)="openDialog()"
+  md-raised-button>Open Dialog</button>
+  
+<br /><br/>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<p>This is some content and stuff to show off Roboto!</p>
