@@ -6,3 +6,7 @@
 .mat-tab-body-content {
   padding-top:20px;
 }
+
+app-root {
+  color: #FFF;
+}

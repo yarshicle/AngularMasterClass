@@ -3,7 +3,7 @@ import { constructDependencies } from '@angular/core/src/di/reflective_provider'
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/timer';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -33,7 +33,7 @@ export class AppComponent {
   progress = 0;
   timer;
   isLoading = false;
-  constructor(private dialog: MdDialog) {
+  constructor(private dialog: MatDialog) {
     this.timer = setInterval(() => {
       this.progress++;
       // tslint:disable-next-line:curly

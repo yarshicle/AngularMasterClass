@@ -32,4 +32,4 @@ import {
     MatDialogModule
   ]
 })
-export class MdComponentsModule { }
+export class MatComponentsModule { }
