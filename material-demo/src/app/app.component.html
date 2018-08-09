@@ -1,92 +1,92 @@
-<md-checkbox 
+
+  <mat-checkbox 
   #showDetails
   [value]=""
   [checked]="isChecked"
   (change)="onChange($event)"
-  color="primary">Show Details</md-checkbox>
+  color="primary">Show Details</mat-checkbox>
 
   <div *ngIf="showDetails.checked">Some details....</div>
 <br /><br/>
 
-  <md-radio-group value="0">
-    <md-radio-button value="1">Male</md-radio-button>
-    <md-radio-button value="0">Female</md-radio-button>
-  </md-radio-group>
+  <mat-radio-group value="0">
+    <mat-radio-button value="1">Male</mat-radio-button>
+    <mat-radio-button value="0">Female</mat-radio-button>
+  </mat-radio-group>
   <br /><br/>
 
-  <md-select [(ngModel)]="color">
-    <md-option *ngFor="let color of colors" [value]="color.id">{{ color.name }}</md-option>
-  </md-select>
+  <mat-form-field>
+    <mat-select [(ngModel)]="color">
+      <mat-option *ngFor="let color of colors" [value]="color.id">{{ color.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
   <br /><br/>
+
 <form class="example-form">
-  <md-form-field class="example-full-width">
-    <input ngModel #username="ngModel" name="username" type="text" item-width="900px" mdInput placeholder="Username" required>
-    <md-hint>Type a unique username</md-hint>
-    <span mdSuffix>@domain.com</span>
-    <span mdPrefix>admin.</span>
-    <md-error *ngIf="username.invalid && username.errors['required']">
+  <mat-form-field class="example-full-width">
+    <input ngModel #username="ngModel" name="username" type="text" item-width="900px" matInput placeholder="Username" required>
+    <mat-hint>Type a unique username</mat-hint>
+    <span matSuffix>@domain.com</span>
+    <span matPrefix>admin.</span>
+    <mat-error *ngIf="username.invalid && username.errors['required']">
       The username field is required
-    </md-error>
-  </md-form-field>
+    </mat-error>
+  </mat-form-field>
   <br /><br/>
-  <md-form-field class="example-full-width">
-    <textarea mdInput mdTextareaAutosize rows="2"></textarea>    
-  </md-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea matInput matTextareaAutosize rows="2"></textarea>    
+  </mat-form-field>
 </form>  <br /><br/>
-<md-form-field>
+<mat-form-field>
   <input 
     (focus)="birthdate.open()"
     [min]="minDate"
     [max]="maxDate"
-    mdInput [mdDatepicker]="birthdate" placeholder="Choose a date">
-  <md-datepicker-toggle mdSuffix [for]="birthdate"></md-datepicker-toggle>
-  <md-datepicker #birthdate touchUi="true"></md-datepicker>
-</md-form-field>
+    matInput [matDatepicker]="birthdate" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+  <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
+</mat-form-field>
 <br /><br/>
-<md-icon>add_alert</md-icon>
+<mat-icon>add_alert</mat-icon>
 <br /><br/>
-<button md-button>Button 1</button>
-<button color="primary" md-raised-button>Primary</button>
-<button color="accent" md-raised-button>Accent</button>
-<button color="warn" md-raised-button>Warn</button>
-<button md-fab><md-icon>check</md-icon></button>
+<button mat-button>Button 1</button>
+<button color="primary" mat-raised-button>Primary</button>
+<button color="accent" mat-raised-button>Accent</button>
+<button color="warn" mat-raised-button>Warn</button>
+<button mat-fab><mat-icon>check</mat-icon></button>
 
 <br /><br/>
 
-<md-chip-list>
-  <md-chip color="accent">One</md-chip>
-  <md-chip>Two</md-chip>
-</md-chip-list>
+<mat-chip-list>
+  <mat-chip color="accent">One</mat-chip>
+  <mat-chip>Two</mat-chip>
+</mat-chip-list>
 <br/>
-<md-chip-list>
-  <md-chip *ngFor="let cat of categories" (click)="selectCategory(cat)" [selected]="cat.selected">{{ cat.name }}</md-chip>
-</md-chip-list>
+<mat-chip-list>
+  <mat-chip *ngFor="let cat of categories" (click)="selectCategory(cat)" [selected]="cat.selected">{{ cat.name }}</mat-chip>
+</mat-chip-list>
 
 <br /><br/>
 
-<md-progress-spinner mode="determinate" [value]="progress"></md-progress-spinner>
-<md-progress-spinner mode="indeterminate" *ngIf="isLoading"></md-progress-spinner>
+<mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+<mat-progress-spinner mode="indeterminate" *ngIf="isLoading"></mat-progress-spinner>
 
 <br /><br/>
 
-<span mdTooltip="Here is my tooltip" mdTooltipPosition="right">Some Text</span>
+<span matTooltip="Here is my tooltip" matTooltipPosition="right">Some Text</span>
 
 <br /><br/>
 
-<md-tab-group>
-  <md-tab label="Billing">
-    Content of the Billing Tab
-  </md-tab>
-  <md-tab label="Shipping">
-    Content of the Shipping Tab
-  </md-tab>
-</md-tab-group>
+<mat-tab-group>
+  <mat-tab label="Billing">Content of the Billing Tab</mat-tab>
+  <mat-tab label="Shipping">Content of the Shipping Tab</mat-tab>
+</mat-tab-group>
 
 <br /><br/>
 
 <button 
   (click)="openDialog()"
-  md-raised-button>Open Dialog</button>
+  mat-raised-button>Open Dialog</button>
   
 <br /><br/>
 

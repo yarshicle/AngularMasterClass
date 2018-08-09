@@ -1,4 +1,4 @@
-import { MdComponentsModule } from './md-components.module';
+import { MatComponentsModule } from './md-components.module';
 import { CourseService } from './services/course.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +20,7 @@ import { EditCourseComponent } from './edit-course/edit-course.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MdComponentsModule
+    MatComponentsModule
     // MatCheckboxModule,
     // MatRadioModule,
     // MatSelectModule,
